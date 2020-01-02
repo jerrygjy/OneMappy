@@ -86,7 +86,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "OneMappy/Source"
+  spec.source_files  = "OneMappy/OneMappy/Source/*.swift"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -126,7 +126,7 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
     spec.requires_arc = true
-
+    spec.swift_versions = '4.0'
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
