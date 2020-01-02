@@ -107,7 +107,6 @@ public final class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessio
                                 UserDefaults.standard.set(tokenValidity, forKey: "oneMapTokenValidity")
                             }
                             UserDefaults.standard.set(returnedToken, forKey: "oneMapToken")
-                            // UserDefaults.standard.set(tokenValidity, forKey: "oneMapTokenValidity")
                             return returnedToken
                             
                         } else {
