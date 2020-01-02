@@ -11,11 +11,18 @@
 		736C7EF723BD9B0E0092B59C /* OneMappyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7EF623BD9B0E0092B59C /* OneMappyTests.swift */; };
 		736C7EF923BD9B0E0092B59C /* OneMappy.h in Headers */ = {isa = PBXBuildFile; fileRef = 736C7EEB23BD9B0E0092B59C /* OneMappy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		736C7F0923BD9C780092B59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F0823BD9C780092B59C /* AppDelegate.swift */; };
-		736C7F0B23BD9C780092B59C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F0A23BD9C780092B59C /* SceneDelegate.swift */; };
 		736C7F0D23BD9C780092B59C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F0C23BD9C780092B59C /* ViewController.swift */; };
 		736C7F1023BD9C780092B59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736C7F0E23BD9C780092B59C /* Main.storyboard */; };
 		736C7F1223BD9C790092B59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C7F1123BD9C790092B59C /* Assets.xcassets */; };
 		736C7F1523BD9C790092B59C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736C7F1323BD9C790092B59C /* LaunchScreen.storyboard */; };
+		736C7F1F23BD9F160092B59C /* OneMapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1B23BD9F160092B59C /* OneMapRoute.swift */; };
+		736C7F2023BD9F160092B59C /* OneMapRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1C23BD9F160092B59C /* OneMapRequestManager.swift */; };
+		736C7F2123BD9F160092B59C /* OneMapPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1D23BD9F160092B59C /* OneMapPlace.swift */; };
+		736C7F2223BD9F160092B59C /* OneMapNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1E23BD9F160092B59C /* OneMapNetworkManager.swift */; };
+		736C7F2523BD9F310092B59C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F2323BD9F310092B59C /* FirstViewController.swift */; };
+		736C7F2623BD9F310092B59C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F2423BD9F310092B59C /* SecondViewController.swift */; };
+		736C7F2823BD9FA70092B59C /* OneMappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736C7EE823BD9B0E0092B59C /* OneMappy.framework */; };
+		736C7F2923BD9FA70092B59C /* OneMappy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 736C7EE823BD9B0E0092B59C /* OneMappy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +33,28 @@
 			remoteGlobalIDString = 736C7EE723BD9B0E0092B59C;
 			remoteInfo = OneMappy;
 		};
+		736C7F2A23BD9FA70092B59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 736C7EDF23BD9B0E0092B59C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 736C7EE723BD9B0E0092B59C;
+			remoteInfo = OneMappy;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		736C7F2C23BD9FA70092B59C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				736C7F2923BD9FA70092B59C /* OneMappy.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		736C7EE823BD9B0E0092B59C /* OneMappy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OneMappy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,12 +65,17 @@
 		736C7EF823BD9B0E0092B59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736C7F0623BD9C770092B59C /* OneMappyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneMappyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736C7F0823BD9C780092B59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		736C7F0A23BD9C780092B59C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		736C7F0C23BD9C780092B59C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		736C7F0F23BD9C780092B59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		736C7F1123BD9C790092B59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736C7F1423BD9C790092B59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		736C7F1623BD9C790092B59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		736C7F1B23BD9F160092B59C /* OneMapRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapRoute.swift; sourceTree = "<group>"; };
+		736C7F1C23BD9F160092B59C /* OneMapRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapRequestManager.swift; sourceTree = "<group>"; };
+		736C7F1D23BD9F160092B59C /* OneMapPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapPlace.swift; sourceTree = "<group>"; };
+		736C7F1E23BD9F160092B59C /* OneMapNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapNetworkManager.swift; sourceTree = "<group>"; };
+		736C7F2323BD9F310092B59C /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		736C7F2423BD9F310092B59C /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736C7F2823BD9FA70092B59C /* OneMappy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +112,7 @@
 				736C7EF523BD9B0E0092B59C /* OneMappyTests */,
 				736C7F0723BD9C780092B59C /* OneMappyExample */,
 				736C7EE923BD9B0E0092B59C /* Products */,
+				736C7F2723BD9FA70092B59C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +131,7 @@
 			children = (
 				736C7EEB23BD9B0E0092B59C /* OneMappy.h */,
 				736C7EEC23BD9B0E0092B59C /* Info.plist */,
+				736C7F1A23BD9F160092B59C /* Source */,
 			);
 			path = OneMappy;
 			sourceTree = "<group>";
@@ -113,7 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				736C7F0823BD9C780092B59C /* AppDelegate.swift */,
-				736C7F0A23BD9C780092B59C /* SceneDelegate.swift */,
+				736C7F2323BD9F310092B59C /* FirstViewController.swift */,
+				736C7F2423BD9F310092B59C /* SecondViewController.swift */,
 				736C7F0C23BD9C780092B59C /* ViewController.swift */,
 				736C7F0E23BD9C780092B59C /* Main.storyboard */,
 				736C7F1123BD9C790092B59C /* Assets.xcassets */,
@@ -121,6 +158,24 @@
 				736C7F1623BD9C790092B59C /* Info.plist */,
 			);
 			path = OneMappyExample;
+			sourceTree = "<group>";
+		};
+		736C7F1A23BD9F160092B59C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				736C7F1B23BD9F160092B59C /* OneMapRoute.swift */,
+				736C7F1C23BD9F160092B59C /* OneMapRequestManager.swift */,
+				736C7F1D23BD9F160092B59C /* OneMapPlace.swift */,
+				736C7F1E23BD9F160092B59C /* OneMapNetworkManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		736C7F2723BD9FA70092B59C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,10 +235,12 @@
 				736C7F0223BD9C770092B59C /* Sources */,
 				736C7F0323BD9C770092B59C /* Frameworks */,
 				736C7F0423BD9C770092B59C /* Resources */,
+				736C7F2C23BD9FA70092B59C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				736C7F2B23BD9FA70092B59C /* PBXTargetDependency */,
 			);
 			name = OneMappyExample;
 			productName = OneMappyExample;
@@ -263,6 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736C7F1F23BD9F160092B59C /* OneMapRoute.swift in Sources */,
+				736C7F2023BD9F160092B59C /* OneMapRequestManager.swift in Sources */,
+				736C7F2223BD9F160092B59C /* OneMapNetworkManager.swift in Sources */,
+				736C7F2123BD9F160092B59C /* OneMapPlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +341,8 @@
 			files = (
 				736C7F0D23BD9C780092B59C /* ViewController.swift in Sources */,
 				736C7F0923BD9C780092B59C /* AppDelegate.swift in Sources */,
-				736C7F0B23BD9C780092B59C /* SceneDelegate.swift in Sources */,
+				736C7F2623BD9F310092B59C /* SecondViewController.swift in Sources */,
+				736C7F2523BD9F310092B59C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +353,11 @@
 			isa = PBXTargetDependency;
 			target = 736C7EE723BD9B0E0092B59C /* OneMappy */;
 			targetProxy = 736C7EF323BD9B0E0092B59C /* PBXContainerItemProxy */;
+		};
+		736C7F2B23BD9FA70092B59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 736C7EE723BD9B0E0092B59C /* OneMappy */;
+			targetProxy = 736C7F2A23BD9FA70092B59C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -445,14 +512,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OneMappy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Jerry-Goh.OneMappy";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,14 +539,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OneMappy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Jerry-Goh.OneMappy";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -485,6 +558,7 @@
 		736C7F0023BD9B0E0092B59C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JGXJW5JD8;
 				INFOPLIST_FILE = OneMappyTests/Info.plist;
@@ -503,6 +577,7 @@
 		736C7F0123BD9B0E0092B59C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JGXJW5JD8;
 				INFOPLIST_FILE = OneMappyTests/Info.plist;
@@ -530,6 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Jerry-Goh.OneMappyExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -549,6 +625,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Jerry-Goh.OneMappyExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
