@@ -32,4 +32,6 @@ class OneMapRoute: NSObject {
     var phy_viaRoute: String = ""
     var phy_subtitle: String = ""
     
+    public override init() {}
+    
 }

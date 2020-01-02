@@ -30,7 +30,7 @@ open class OneMapPlace: NSObject, NSCoding {
     //Purpose
     open var Purpose: String = ""
     
-    override init() {
+    public override init() {
         
     }
     
@@ -65,7 +65,7 @@ open class OneMapPlace: NSObject, NSCoding {
         aCoder.encode(self.Location, forKey: "Location")
     }
     
-    func getLocationString() -> String {
+    public func getLocationString() -> String {
         
         //Formulating
         
@@ -95,7 +95,7 @@ open class OneMapPlace: NSObject, NSCoding {
         return self.Location
     }
     
-    func getAddress() -> String {
+    public func getAddress() -> String {
         var addressStr = ""
         
         if self.BUILDINGNAME.isEmpty == false && self.BUILDINGNAME != "NIL" && self.BUILDINGNAME != "null"{

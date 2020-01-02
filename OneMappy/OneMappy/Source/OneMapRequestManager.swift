@@ -8,15 +8,19 @@
 
 import UIKit
 
-class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessionDataDelegate {
+public final class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessionDataDelegate {
     
     var queue = OperationQueue()
-    static let sharedInstance = OneMapRequestManager()
+    public static let sharedInstance = OneMapRequestManager()
     
     let OneMap_API_ReverseGeocode: String =  "https://developers.onemap.sg/privateapi/commonsvc/revgeocode"
     let OneMap_API_Search: String =  "https://developers.onemap.sg/commonapi/search"
     let OneMap_API_Route: String =  "https://developers.onemap.sg/privateapi/routingsvc/route"
     let OneMap_API_GetToken: String =  "https://developers.onemap.sg/privateapi/auth/post/getToken"
+    
+    public override init() {
+        
+    }
     
     func appendTokenToParam(inputParam: Dictionary<String, Any>)->Dictionary<String, Any> {
         
@@ -323,7 +327,8 @@ class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessionDataDelegate
         })
         task.resume()
     }
-    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Swift.Void) {
+    
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Swift.Void) {
         
         var disposition: URLSession.AuthChallengeDisposition = URLSession.AuthChallengeDisposition.performDefaultHandling
         

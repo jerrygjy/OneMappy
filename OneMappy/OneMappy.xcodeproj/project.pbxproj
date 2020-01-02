@@ -18,7 +18,6 @@
 		736C7F1F23BD9F160092B59C /* OneMapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1B23BD9F160092B59C /* OneMapRoute.swift */; };
 		736C7F2023BD9F160092B59C /* OneMapRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1C23BD9F160092B59C /* OneMapRequestManager.swift */; };
 		736C7F2123BD9F160092B59C /* OneMapPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1D23BD9F160092B59C /* OneMapPlace.swift */; };
-		736C7F2223BD9F160092B59C /* OneMapNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F1E23BD9F160092B59C /* OneMapNetworkManager.swift */; };
 		736C7F2523BD9F310092B59C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F2323BD9F310092B59C /* FirstViewController.swift */; };
 		736C7F2623BD9F310092B59C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F2423BD9F310092B59C /* SecondViewController.swift */; };
 		736C7F2823BD9FA70092B59C /* OneMappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736C7EE823BD9B0E0092B59C /* OneMappy.framework */; };
@@ -73,7 +72,6 @@
 		736C7F1B23BD9F160092B59C /* OneMapRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapRoute.swift; sourceTree = "<group>"; };
 		736C7F1C23BD9F160092B59C /* OneMapRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapRequestManager.swift; sourceTree = "<group>"; };
 		736C7F1D23BD9F160092B59C /* OneMapPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapPlace.swift; sourceTree = "<group>"; };
-		736C7F1E23BD9F160092B59C /* OneMapNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMapNetworkManager.swift; sourceTree = "<group>"; };
 		736C7F2323BD9F310092B59C /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		736C7F2423BD9F310092B59C /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +164,6 @@
 				736C7F1B23BD9F160092B59C /* OneMapRoute.swift */,
 				736C7F1C23BD9F160092B59C /* OneMapRequestManager.swift */,
 				736C7F1D23BD9F160092B59C /* OneMapPlace.swift */,
-				736C7F1E23BD9F160092B59C /* OneMapNetworkManager.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -322,7 +319,6 @@
 			files = (
 				736C7F1F23BD9F160092B59C /* OneMapRoute.swift in Sources */,
 				736C7F2023BD9F160092B59C /* OneMapRequestManager.swift in Sources */,
-				736C7F2223BD9F160092B59C /* OneMapNetworkManager.swift in Sources */,
 				736C7F2123BD9F160092B59C /* OneMapPlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
