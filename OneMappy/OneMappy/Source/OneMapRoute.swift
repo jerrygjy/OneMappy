@@ -10,10 +10,7 @@ import UIKit
 
 class OneMapRoute: NSObject {
 
-    //Distance should be taken with following priorities
-    //1. PhyRoute, 2. master route, 3.  alternate route
-     var distanceToUse: String = ""
-    
+    var distanceToUse: String = ""
     var status_message: String = ""
     var routeGeometryString: String = ""
     var status: String = ""

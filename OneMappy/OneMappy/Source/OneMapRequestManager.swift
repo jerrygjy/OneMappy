@@ -183,7 +183,6 @@ public final class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessio
     public func getOneMapSearch(keyword: String, pageNumber: String, onSuccess: @escaping([String: Any]) -> Void, onFailure: @escaping(Error) -> Void) {
         
         let url: String = OneMap_API_Search
-        
         var paramDict = Dictionary<String, Any>()
         
         paramDict["searchVal"] = keyword
@@ -192,7 +191,6 @@ public final class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessio
         paramDict["getAddrDetails"] = "Y"
         //Add token to param
         let requestParam = paramDict //self.appendTokenToParam(inputParam: paramDict)
-        
         var components = URLComponents(string: url)
         components?.queryItems = requestParam.map { (arg) -> URLQueryItem in
             let (attName, attValue) = arg
@@ -234,9 +232,8 @@ public final class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessio
         paramDict["start"] = origin
         let destination = String(format: "%@,%@", destinationLat, destinationLong)
         paramDict["end"] = destination
-        
         paramDict["routeType"] = routeType
-        //Add token to param
+
         let requestParam = self.appendTokenToParam(inputParam: paramDict)
         
         var components = URLComponents(string: url)
