@@ -11,7 +11,6 @@
 		736C7EF723BD9B0E0092B59C /* OneMappyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7EF623BD9B0E0092B59C /* OneMappyTests.swift */; };
 		736C7EF923BD9B0E0092B59C /* OneMappy.h in Headers */ = {isa = PBXBuildFile; fileRef = 736C7EEB23BD9B0E0092B59C /* OneMappy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		736C7F0923BD9C780092B59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F0823BD9C780092B59C /* AppDelegate.swift */; };
-		736C7F0D23BD9C780092B59C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7F0C23BD9C780092B59C /* ViewController.swift */; };
 		736C7F1023BD9C780092B59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736C7F0E23BD9C780092B59C /* Main.storyboard */; };
 		736C7F1223BD9C790092B59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C7F1123BD9C790092B59C /* Assets.xcassets */; };
 		736C7F1523BD9C790092B59C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736C7F1323BD9C790092B59C /* LaunchScreen.storyboard */; };
@@ -335,7 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				736C7F0D23BD9C780092B59C /* ViewController.swift in Sources */,
 				736C7F0923BD9C780092B59C /* AppDelegate.swift in Sources */,
 				736C7F2623BD9F310092B59C /* SecondViewController.swift in Sources */,
 				736C7F2523BD9F310092B59C /* FirstViewController.swift in Sources */,

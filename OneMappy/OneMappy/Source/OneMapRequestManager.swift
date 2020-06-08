@@ -64,63 +64,70 @@ public final class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessio
     func postGetTokenSync() -> String {
         
         let url: String = OneMap_API_GetToken
-        let username  = ""
-        let password = ""
         
-        var paramDict = Dictionary<String, String>()
-        
-        paramDict["email"] = username
-        paramDict["password"] = password
-        
-        if let serviceUrl = URL(string: url) {
-            var request = URLRequest(url: serviceUrl)
-            request.httpMethod = "POST"
-            request.setValue("Application/json", forHTTPHeaderField: "Content-type")
-            
-            if let httpBody = try? JSONSerialization.data(withJSONObject: paramDict, options: []) {
-                request.httpBody = httpBody
+        if  let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
+            if let dict = NSDictionary(contentsOfFile: path) as? [String: AnyObject] {
                 
-                let session = self.createDefaultSession(timeout: 90.0)
-                let task = session.synchronousDataTask(with: request)
-                if task.2 != nil {
+                if dict["OneMapEmail"] != nil &&  dict["OneMapPassword"] != nil {
+                    let username  = dict["OneMapEmail"] as! String
+                    let password = dict["OneMapPassword"] as! String
                     
-                } else if let data = task.0 {
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, Any>
-                        if json["access_token"] != nil && json["expiry_timestamp"] != nil {
+                    var paramDict = Dictionary<String, String>()
+                    paramDict["email"] = username
+                    paramDict["password"] = password
+                    
+                    if let serviceUrl = URL(string: url) {
+                        var request = URLRequest(url: serviceUrl)
+                        request.httpMethod = "POST"
+                        request.setValue("Application/json", forHTTPHeaderField: "Content-type")
+                        
+                        if let httpBody = try? JSONSerialization.data(withJSONObject: paramDict, options: []) {
+                            request.httpBody = httpBody
                             
-                            let returnedToken: String = json["access_token"] as! String
-                            var tokenValidity = ""
-                            
-                            if json["expiry_timestamp"] != nil {
-                                //  do {
-                                if  json["expiry_timestamp"] != nil {
-                                    let type = json["expiry_timestamp"]
-                                    if type is String {
-                                        tokenValidity = type as! String
+                            let session = self.createDefaultSession(timeout: 90.0)
+                            let task = session.synchronousDataTask(with: request)
+                            if task.2 != nil {
+                                
+                            } else if let data = task.0 {
+                                do {
+                                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, Any>
+                                    if json["access_token"] != nil && json["expiry_timestamp"] != nil {
+                                        
+                                        let returnedToken: String = json["access_token"] as! String
+                                        var tokenValidity = ""
+                                        
+                                        if json["expiry_timestamp"] != nil {
+                                            //  do {
+                                            if  json["expiry_timestamp"] != nil {
+                                                let type = json["expiry_timestamp"]
+                                                if type is String {
+                                                    tokenValidity = type as! String
+                                                } else {
+                                                    let num = type as! NSNumber
+                                                    tokenValidity = num.stringValue
+                                                }
+                                                
+                                            }
+                                            UserDefaults.standard.set(tokenValidity, forKey: "oneMapTokenValidity")
+                                        }
+                                        UserDefaults.standard.set(returnedToken, forKey: "oneMapToken")
+                                        return returnedToken
+                                        
                                     } else {
-                                        let num = type as! NSNumber
-                                        tokenValidity = num.stringValue
+                                        return UserDefaults.standard.string(forKey: "oneMapToken") ?? ""
                                     }
                                     
+                                } catch let error as NSError {
+                                    print(error.description)
                                 }
-                                UserDefaults.standard.set(tokenValidity, forKey: "oneMapTokenValidity")
                             }
-                            UserDefaults.standard.set(returnedToken, forKey: "oneMapToken")
-                            return returnedToken
                             
-                        } else {
-                            return UserDefaults.standard.string(forKey: "oneMapToken") ?? ""
                         }
-                        
-                    } catch let error as NSError {
-                        print(error.description)
                     }
                 }
-                
             }
+            
         }
-        
         return ""
     }
     
@@ -233,7 +240,7 @@ public final class OneMapRequestManager: NSObject, URLSessionDelegate, URLSessio
         let destination = String(format: "%@,%@", destinationLat, destinationLong)
         paramDict["end"] = destination
         paramDict["routeType"] = routeType
-
+        
         let requestParam = self.appendTokenToParam(inputParam: paramDict)
         
         var components = URLComponents(string: url)
