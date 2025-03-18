@@ -1,3 +1,11 @@
+# ⚠️ Deprecation Notice ⚠️
+
+**This repository is deprecated and no longer maintained or supported.**
+
+The code in this repository is no longer being updated, and no further support will be provided. If you are using this code, consider migrating to an alternative solution.
+
+Thank you for your understanding.
+
 # OneMappy
 A Swift library for consuming One Map API for iOS
 
